@@ -3,4 +3,7 @@
 GET {{DisasterApi_HostAddress}}/api/GetDisasterData/
 Accept: application/json
 
+GET {{DisasterApi_HostAddress}}/api/SetDisasterData/
+Accept: application/json
+
 ###

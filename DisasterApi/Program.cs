@@ -27,6 +27,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.MapSwagger().RequireAuthorization();
 //コントローラークラスを読み込むためのメソッド
 app.MapControllers();
 
