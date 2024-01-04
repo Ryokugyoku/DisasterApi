@@ -31,3 +31,8 @@
 /Users/ryokugyoku/Documents/Project/DisasterApi/DisasterApi/obj/Debug/net8.0/DisasterApi.pdb
 /Users/ryokugyoku/Documents/Project/DisasterApi/DisasterApi/obj/Debug/net8.0/DisasterApi.genruntimeconfig.cache
 /Users/ryokugyoku/Documents/Project/DisasterApi/DisasterApi/obj/Debug/net8.0/ref/DisasterApi.dll
+/Users/ryokugyoku/Documents/Project/DisasterApi/DisasterApi/bin/Debug/net8.0/AWSSDK.Core.dll
+/Users/ryokugyoku/Documents/Project/DisasterApi/DisasterApi/bin/Debug/net8.0/AWSSDK.DynamoDBv2.dll
+/Users/ryokugyoku/Documents/Project/DisasterApi/DisasterApi/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.dll
+/Users/ryokugyoku/Documents/Project/DisasterApi/DisasterApi/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/ryokugyoku/Documents/Project/DisasterApi/DisasterApi/obj/Debug/net8.0/DisasterApi.sourcelink.json
