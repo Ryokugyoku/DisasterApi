@@ -1,4 +1,4 @@
-namespace DisasterApi.Models;
+namespace DisasterApi.Entity;
 
 using DisasterApi.Enum;
 
