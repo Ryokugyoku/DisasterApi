@@ -10,20 +10,21 @@ public class DisasterInformationEntity{
     /// <summary>
     ///  災害情報種別
     /// </summary>
-    public DisasterType Type;
+    public DisasterType Type{get;set;}
 
     /// <summary>
     ///  Gps情報を格納する
     /// </summary>
-    public string? Gps;
+    public string? Gps{get;set;}
 
     /// <summary>
-    ///  写真をバイナリーデータとして取得する
+    ///  写真Base64
+    ///  
     /// </summary>
-    public byte[]? photo;
+    public string? PhotoBase64 {get;set;}
 
     /// <summary>
     /// 住所
     /// </summary>
-    public string? address;
+    public string? Address{get;set;}
 }
