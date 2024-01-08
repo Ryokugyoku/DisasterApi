@@ -1,10 +1,8 @@
 using Amazon.DynamoDBv2.DataModel;
 using DisasterApi.Entity;
 using DisasterAPI.DataBase;
-using DisasterAPI.DataBase.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.Linq;
+
 
 /// <summary>
 ///  災害情報を取り扱う基底API群
@@ -40,7 +38,9 @@ public class ApiController : ControllerBase{
     /// <returns></returns>
     [HttpPost]
     public async Task<IActionResult> SetDisasterData(DisasterInformationEntity disasterRequest){
-        var record = DataBaseManager.DisasterInformationEntityToDisasterRecord(disasterRequest);
+        string ipv4 = Request.HttpContext.Connection.RemoteIpAddress.MapToIPv4().ToString();
+        string ipv6 = Request.HttpContext.Connection.RemoteIpAddress.MapToIPv6().ToString();
+        var record = DataBaseManager.DisasterInformationEntityToDisasterRecord(disasterRequest, ipv4, ipv6);
         await _context.SaveAsync(record);
         return Ok(disasterRequest);
     }

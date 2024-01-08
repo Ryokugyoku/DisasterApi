@@ -17,5 +17,9 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0"/>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0"/>
     <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.7.300"/>
+    <!-- Windows 
+      <Reference Include="AwsAssemblies\AWSSDK.Core.dll" />
+      <Reference Include="AwsAssemblies\AWSSDK.S3.dll" />
+     -->
   </ItemGroup>
 </Project>

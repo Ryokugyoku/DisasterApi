@@ -12,7 +12,7 @@ public class DisasterTable{
     ///  パーティションキー  管理用ID
     /// </summary>
     [DynamoDBHashKey("id")]
-    public int? Id{get; set;}
+    public string? Guid{get; set;}
 
     /// <summary>
     ///  GPS情報
@@ -24,7 +24,7 @@ public class DisasterTable{
     ///     DisasterEnumの値を格納する
     /// </summary>
     [DynamoDBRangeKey("disaster_type")]
-    public int? DisasterType{get;set;}
+    public int DisasterType{get;set;}
 
     /// <summary>
     /// 住所

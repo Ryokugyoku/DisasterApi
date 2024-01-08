@@ -1,10 +1,15 @@
 using System.Reflection;
 using Amazon.DynamoDBv2;
 using Amazon.DynamoDBv2.DataModel;
-using Microsoft.CodeAnalysis.Options;
-using Microsoft.OpenApi.Models;
+using Amazon.Runtime;
+using DisasterAPI.Common;
+using DisasterAPI.DataBase;
+using Microsoft.EntityFrameworkCore.Storage;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddControllers();
@@ -14,11 +19,16 @@ builder.Services.AddSwaggerGen( options => {
 }
 );
 
-
 var awsOption = builder.Configuration.GetAWSOptions();
+
 builder.Services.AddDefaultAWSOptions(awsOption);
 builder.Services.AddAWSService<IAmazonDynamoDB>();
 builder.Services.AddScoped<IDynamoDBContext, DynamoDBContext>();
+
+Amazon.AWSConfigs.AWSProfileName = "local";
+//各種セットアップ処理
+PhotoManager.SetUp();
+DataBaseManager.SetUp();
 
 var app = builder.Build();
 
